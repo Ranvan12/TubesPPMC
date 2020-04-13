@@ -60,3 +60,118 @@ void Update (cell*** A, int r, int c){
           - - - - -
          selama 3 iterasi
  */
+
+//Test function
+cell** A;
+int i, j, r, c;
+
+int  main (){
+	r = 5;
+	c = 5;
+	A = (cell**) malloc (r * sizeof (cell*));
+	for (i = 0; i < r; i = i + 1){
+		A[i] = (cell*) malloc (c * sizeof (cell));
+	}
+	
+	for (i = 0; i < r; i = i + 1){
+		for (j = 0; j < c; j = j + 1){
+			scanf ("%c", &A[i][j].data);
+		}
+	}
+	
+	printf ("\n");
+	
+	
+	for (i = 0; i < r; i = i + 1){
+		for (j = 0; j < c; j = j + 1){
+			printf ("%c ", A[i][j].data);
+		}
+		printf ("\n");
+	}
+	
+	printf ("\n");
+	AliveNeighbor (&A, r, c);
+	
+	for (i = 0; i < r; i = i + 1){
+		for (j = 0; j < c; j = j + 1){
+			printf ("%d ", A[i][j].neighbor);
+		}
+		printf ("\n");
+	}
+	
+	printf ("\n");
+	Update (&A, r, c);
+	
+	for (i = 0; i < r; i = i + 1){
+		for (j = 0; j < c; j = j + 1){
+			printf ("%c ", A[i][j].data);
+		}
+		printf ("\n");
+	}
+	
+	printf ("\n");
+	AliveNeighbor (&A, r, c);
+	
+	for (i = 0; i < r; i = i + 1){
+		for (j = 0; j < c; j = j + 1){
+			printf ("%d ", A[i][j].neighbor);
+		}
+		printf ("\n");
+	}
+	
+	printf ("\n");
+	Update (&A, r, c);
+	
+	for (i = 0; i < r; i = i + 1){
+		for (j = 0; j < c; j = j + 1){
+			printf ("%c ", A[i][j].data);
+		}
+		printf ("\n");
+	}
+	
+	printf ("\n");
+	AliveNeighbor (&A, r, c);
+	
+	for (i = 0; i < r; i = i + 1){
+		for (j = 0; j < c; j = j + 1){
+			printf ("%d ", A[i][j].neighbor);
+		}
+		printf ("\n");
+	}
+	
+	printf ("\n");
+	Update (&A, r, c);
+	
+	for (i = 0; i < r; i = i + 1){
+		for (j = 0; j < c; j = j + 1){
+			printf ("%c ", A[i][j].data);
+		}
+		printf ("\n");
+	}
+	
+	printf ("\n");
+	AliveNeighbor (&A, r, c);
+	
+	for (i = 0; i < r; i = i + 1){
+		for (j = 0; j < c; j = j + 1){
+			printf ("%d ", A[i][j].neighbor);
+		}
+		printf ("\n");
+	}
+	
+	printf ("\n");
+	Update (&A, r, c);
+	
+	for (i = 0; i < r; i = i + 1){
+		for (j = 0; j < c; j = j + 1){
+			printf ("%c ", A[i][j].data);
+		}
+		printf ("\n");
+	}
+	
+	free (A);
+	
+	//Test : -------X---XXX---X------- (example)
+	
+	return 0;
+}
