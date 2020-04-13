@@ -66,6 +66,7 @@ cell** A;
 int i, j, r, c;
 
 int  main (){
+	//Masukan jumlah baris dan kolom matriks
 	r = 5;
 	c = 5;
 	A = (cell**) malloc (r * sizeof (cell*));
@@ -73,6 +74,7 @@ int  main (){
 		A[i] = (cell*) malloc (c * sizeof (cell));
 	}
 	
+	//Input data
 	for (i = 0; i < r; i = i + 1){
 		for (j = 0; j < c; j = j + 1){
 			scanf ("%c", &A[i][j].data);
@@ -90,7 +92,13 @@ int  main (){
 	}
 	
 	printf ("\n");
-	AliveNeighbor (&A, r, c);
+	
+	//Bagian ini bisa pakai for loop untuk jumlah iterasi tertentu
+	//tapi karena yang buat awalnya cuma mau buat untuk 1 iterasi
+	//lalu ternyata tiba-tiba ingin nambah jumlah iterasi tapi mager buat loop
+	//jadi buat yang kedua, ketiga, dst cuma copas dari yang pertama saja.
+	
+	Update (&A, r, c);
 	
 	for (i = 0; i < r; i = i + 1){
 		for (j = 0; j < c; j = j + 1){
@@ -100,7 +108,6 @@ int  main (){
 	}
 	
 	printf ("\n");
-	Update (&A, r, c);
 	
 	for (i = 0; i < r; i = i + 1){
 		for (j = 0; j < c; j = j + 1){
@@ -110,7 +117,7 @@ int  main (){
 	}
 	
 	printf ("\n");
-	AliveNeighbor (&A, r, c);
+	Update (&A, r, c);
 	
 	for (i = 0; i < r; i = i + 1){
 		for (j = 0; j < c; j = j + 1){
@@ -120,7 +127,6 @@ int  main (){
 	}
 	
 	printf ("\n");
-	Update (&A, r, c);
 	
 	for (i = 0; i < r; i = i + 1){
 		for (j = 0; j < c; j = j + 1){
@@ -130,7 +136,7 @@ int  main (){
 	}
 	
 	printf ("\n");
-	AliveNeighbor (&A, r, c);
+	Update (&A, r, c);
 	
 	for (i = 0; i < r; i = i + 1){
 		for (j = 0; j < c; j = j + 1){
@@ -140,7 +146,6 @@ int  main (){
 	}
 	
 	printf ("\n");
-	Update (&A, r, c);
 	
 	for (i = 0; i < r; i = i + 1){
 		for (j = 0; j < c; j = j + 1){
@@ -150,7 +155,7 @@ int  main (){
 	}
 	
 	printf ("\n");
-	AliveNeighbor (&A, r, c);
+	Update (&A, r, c);
 	
 	for (i = 0; i < r; i = i + 1){
 		for (j = 0; j < c; j = j + 1){
@@ -160,7 +165,6 @@ int  main (){
 	}
 	
 	printf ("\n");
-	Update (&A, r, c);
 	
 	for (i = 0; i < r; i = i + 1){
 		for (j = 0; j < c; j = j + 1){
@@ -171,7 +175,7 @@ int  main (){
 	
 	free (A);
 	
-	//Test : -------X---XXX---X------- (example)
+	//Test Input : -------X---XXX---X------- (example)
 	
 	return 0;
 }
