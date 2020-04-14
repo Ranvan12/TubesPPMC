@@ -24,10 +24,13 @@ int i, j;
 char fileName;
 
 void Delay(int ms);
-void menu();
 
 int main(){
     char apapun;
+    int choice, num_it;
+    char next;
+
+    //deskripsi biar lucu
     printf("\n");
     printf(" ----------------------------------------------------------------------------- \n");
     printf("x                                Game of Life                                 x\n");
@@ -42,70 +45,63 @@ int main(){
     printf(" ----------------------------------------------------------------------------- \n\n");
     printf("Tekan enter untuk mulai bermain!");
     scanf("%c", &apapun);
-    
-    menu();
+
+    //looping menu
+    next = 'Y';
+    while (next == 'Y'|| next == 'y'){
+        printf("\nMasukkan nama file : \n");
+        //input_file(A, r, c, fileName);
+        Delay(750);
+        printf("\nMemulai simulasi."); Delay(750); printf("."); Delay(750); printf("."); Delay(750);
+        printf("\n");
+
+        printf("Bentuk seed saat ini: \n");
+        //Display(r, c, A, 250);
+        
+        printf("Apa yang ingin Anda lakukan?\n");
+        printf("1. Animate\n2. Tick\n3. Quit\n");
+        printf("Pilih 1/2/3 : ");
+        scanf("%d", &choice);
+
+        while (choice != 3){
+            if (choice == 1){
+                printf("\nMasukkan banyak iterasi yang ingin dilakukan!\n");
+                printf("Banyak iterasi : ");
+                scanf("%d", &num_it);
+                //loop sebanyak num_it
+                for(i=0; i<=num_it; i++){
+                    //Update(A, r, c);
+                    //Display(r, c, A, 250);
+                    printf("tick ke = %d\n", i);
+                    Delay(250); //ini biar ada isi aja
+                }
+            }
+            else if (choice==2){
+                printf("\n");
+                //Update(A, r, c);
+                //Display(r, c, A, 250);
+                printf("1 kali tick\n");
+            }
+            else{
+                printf("Anda salah memasukkan pilihan!\n");
+                printf("Masukkan pilihan kembali.\n");
+            }
+            printf("\nApa yang ingin Anda lakukan?\n");
+            printf("1. Animate\n2. Tick\n3. Quit\n");
+            printf("Pilih 1/2/3 : ");
+            scanf("%d", &choice);
+            printf("\n");
+        }
+        
+        printf("Simulasi selesai!\n");
+        printf("Apakah Anda ingin memasukkan file baru?\n");
+        printf("Y/N : ");
+        scanf(" %c", &next);
+    }
 
     printf("Terima kasih telah bermain! Simulasi berakhir.");
     return 0;
 }
-
-void menu(){
-    int choice, num_it;
-    char next;
-    printf("\nMasukkan nama file : \n");
-    //input_file(A, r, c, fileName);
-    printf("\nMemulai simulasi."); Delay(750); printf("."); Delay(750); printf("."); Delay(750);
-    printf("\n");
-
-    printf("Bentuk seed saat ini: \n");
-    //Display(r, c, A, 250);
-	
-    printf("\nApa yang ingin Anda lakukan?\n");
-    printf("1. Animate\n2. Tick\n3. Quit\n");
-    printf("Pilih 1/2/3 : ");
-    scanf("%d", &choice);
-
-    while (choice != 3){
-        if (choice == 1){
-            printf("\nMasukkan banyak iterasi yang ingin dilakukan!\n");
-            printf("Banyak iterasi : ");
-            scanf("%d", &num_it);
-		
-            for(i=0; i<=num_it; i++){
-                //Update(A, r, c);
-                //Display(r, c, A, 250);
-                printf("tick ke = %d\n", i);
-                Delay(250); //ini biar ada isi aja
-            }
-        }
-        else if (choice==2){
-            printf("\n");
-            //Update(A, r, c);
-            //Display(r, c, A, 250);
-            printf("1 kali tick\n");
-        }
-        else{
-            printf("Anda salah memasukkan pilihan!\n");
-            printf("Masukkan pilihan kembali.\n");
-        }
-        printf("\nApa yang ingin Anda lakukan?\n");
-        printf("1. Animate\n2. Tick\n3. Quit\n");
-        printf("Pilih 1/2/3 : ");
-        scanf("%d", &choice);
-        printf("\n");
-    }
-	
-    printf("Simulasi selesai!\n");
-    printf("Apakah Anda ingin memasukkan file baru?\n");
-    printf("Y/N : ");
-    scanf(" %c", &next);
-	
-    if (next == 'Y'|| next == 'y')
-        menu();
-    else if (next == 'N'|| next == 'n')
-        return;
-}
-
 
 void Delay(int time) // ide diambil dari https://c-for-dummies.com/blog/?p=69, diakses  14 Apr 2020, 02:30
 {   //time dalam milidetik
