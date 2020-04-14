@@ -23,7 +23,7 @@ int r, c;
 int i, j;
 char fileName;
 
-void delay(int ms);
+void Delay(int ms);
 void menu();
 
 int main(){
@@ -54,7 +54,7 @@ void menu(){
     char next;
     printf("\nMasukkan nama file : \n");
     //input_file(A, r, c, fileName);
-    printf("\nMemulai simulasi."); delay(750); printf("."); delay(750); printf("."); delay(750);
+    printf("\nMemulai simulasi."); Delay(750); printf("."); Delay(750); printf("."); Delay(750);
     printf("\n");
 
     printf("Bentuk seed saat ini: \n");
@@ -75,7 +75,7 @@ void menu(){
                 //Update(A, r, c);
                 //Display(r, c, A, 250);
                 printf("tick ke = %d\n", i);
-                delay(250); //ini biar ada isi aja
+                Delay(250); //ini biar ada isi aja
             }
         }
         else if (choice==2){
@@ -107,13 +107,14 @@ void menu(){
 }
 
 
-// sebenarnya delay gabung sama display, tapi untuk nyoba-nyoba diambil dari internet dulu
-void delay(int ms){ //diambil dari https://c-for-dummies.com/blog/?p=69
+void Delay(int time) // ide diambil dari https://c-for-dummies.com/blog/?p=69, diakses  14 Apr 2020, 02:30
+{   //time dalam milidetik
     long pause;
-    clock_t now, then;
+    clock_t now,start;
 
-    pause = ms*(CLOCKS_PER_SEC/1000);
-    now = then = clock();
-    while((now-then) < pause )
+    now = start = clock();
+    pause = time*(CLOCKS_PER_SEC/1000);
+
+    while( (now-start) < pause )
         now = clock();
 }
