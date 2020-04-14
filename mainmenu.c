@@ -5,14 +5,13 @@
  * Asisten (NIM)	: Rahma Rizky Alifia (18316003)
  * Nama File		: mainmenu.c
  * Deskripsi		: Program yang berisi prosedur menu dan main function dari simulasi
- *                    Game of Life
+ *                    	  Game of Life
  */
 
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
 #include<time.h>
-
 
 typedef struct cell {
 	char data;
@@ -60,6 +59,7 @@ void menu(){
 
     printf("Bentuk seed saat ini: \n");
     //Display(r, c, A, 250);
+	
     printf("\nApa yang ingin Anda lakukan?\n");
     printf("1. Animate\n2. Tick\n3. Quit\n");
     printf("Pilih 1/2/3 : ");
@@ -70,6 +70,7 @@ void menu(){
             printf("\nMasukkan banyak iterasi yang ingin dilakukan!\n");
             printf("Banyak iterasi : ");
             scanf("%d", &num_it);
+		
             for(i=0; i<=num_it; i++){
                 //Update(A, r, c);
                 //Display(r, c, A, 250);
@@ -93,10 +94,12 @@ void menu(){
         scanf("%d", &choice);
         printf("\n");
     }
+	
     printf("Simulasi selesai!\n");
     printf("Apakah Anda ingin memasukkan file baru?\n");
     printf("Y/N : ");
     scanf(" %c", &next);
+	
     if (next == 'Y'|| next == 'y')
         menu();
     else if (next == 'N'|| next == 'n')
