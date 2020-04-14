@@ -61,9 +61,8 @@ void Update (cell*** A, int r, int c){
          selama 3 iterasi
  */
 
-//Bagian ini hanya untuk menguji kedua fungsi di atas
-//Test function
-
+//Bagian ini hanya untuk menguji kedua fungsi di atas bekerja atau tidak
+//Bukan untuk menguji fungsi secara mendetail karena hanya dicoba untuk array 5 x 5
 int main (){
 	cell** A;
 	int i, j, r, c;
