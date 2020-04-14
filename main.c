@@ -4,7 +4,7 @@
  * Hari dan Tanggal	: Senin, 13 April 2020
  * Asisten (NIM)	: Rahma Rizky Alifia (18316003)
  * Nama File		: main.c
- * Deskripsi		: Program yang main function dari simulasi Game of Life
+ * Deskripsi		: Program main function dari simulasi Game of Life
  */
 
 #include<stdio.h>
