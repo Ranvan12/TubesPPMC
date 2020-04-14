@@ -61,11 +61,13 @@ void Update (cell*** A, int r, int c){
          selama 3 iterasi
  */
 
+//Bagian ini hanya untuk menguji kedua fungsi di atas
 //Test function
-cell** A;
-int i, j, r, c;
 
-int  main (){
+void TestSimulate (){
+	cell** A;
+	int i, j, r, c;
+	
 	//Masukan jumlah baris dan kolom matriks
 	r = 5;
 	c = 5;
@@ -94,9 +96,9 @@ int  main (){
 	printf ("\n");
 	
 	//Bagian ini bisa pakai for loop untuk jumlah iterasi tertentu
-	//tapi karena yang buat awalnya cuma mau buat untuk 1 iterasi
-	//lalu ternyata tiba-tiba ingin nambah jumlah iterasi tapi mager buat loop
-	//jadi buat yang kedua, ketiga, dst cuma copas dari yang pertama saja.
+	//teapi karena awalnya hanya ingin menguji untuk 1 iterasi
+	//lalu ternyata tiba-tiba ingin menambah jumlah iterasi tetapi tidak ingin membuat loop
+	//jadi iterasi yang kedua, ketiga, dst hanya copy-paste dari yang pertama saja.
 	
 	Update (&A, r, c);
 	
@@ -175,7 +177,5 @@ int  main (){
 	
 	free (A);
 	
-	//Test Input : -------X---XXX---X------- (example)
-	
-	return 0;
+	//Test Input Example : -------X---XXX---X-------
 }
