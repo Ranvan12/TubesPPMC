@@ -8,14 +8,6 @@
  *          		  menyimulasikan Game of Life untuk 1 iterasi
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct cell {
-	char data;
-	int neighbor;
-} cell;
-
 //Prosedur untuk mengisi data neighbor
 void AliveNeighbor (cell*** A, int r, int c){
 	int i, j, h, v;

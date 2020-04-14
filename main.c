@@ -7,27 +7,13 @@
  * Deskripsi		: Program main function dari simulasi Game of Life
  */
 
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
-#include<time.h>
-
-typedef struct cell {
-	char data;
-	int neighbor;
-} cell;
-
-cell** A;
-int r, c;
-int i, j;
-char fileName;
-
-void Delay(int ms);
+#include "lib.h"
 
 int main(){
     char apapun;
     int choice, num_it;
     char next;
+    int i;
 
     //deskripsi biar lucu
     printf("\n");
@@ -99,16 +85,4 @@ int main(){
 
     printf("Terima kasih telah bermain! Simulasi berakhir.");
     return 0;
-}
-
-void Delay(int time) // ide diambil dari https://c-for-dummies.com/blog/?p=69, diakses  14 Apr 2020, 02:30
-{   //time dalam milidetik
-    long pause;
-    clock_t now,start;
-
-    now = start = clock();
-    pause = time*(CLOCKS_PER_SEC/1000);
-
-    while( (now-start) < pause )
-        now = clock();
 }

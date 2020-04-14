@@ -1,6 +1,3 @@
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
 
 int main(){
 	char isi_file[100][100], in_file[50];

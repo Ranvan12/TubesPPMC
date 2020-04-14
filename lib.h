@@ -18,7 +18,7 @@ typedef struct cell {
 	int neighbor;
 } cell;
 
-void input_file(**cell matrix, int *r, int *c, char *filename);
+//void input_file(**cell matrix, int *r, int *c, char *filename);
 void AliveNeighbor (cell*** A, int r, int c);
 void Update (cell*** A, int r, int c);
 void Delay(int time);
