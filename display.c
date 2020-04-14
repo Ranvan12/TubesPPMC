@@ -9,15 +9,6 @@
 *   Implementasi Fungsi Display dan Delay
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-typedef struct cell{
-    char data;
-    int neighbor;
-} cell;
-
 void Delay(int time) // ide diambil dari https://c-for-dummies.com/blog/?p=69, diakses  14 Apr 2020, 02:30
 {   //time dalam milidetik
     long pause;
