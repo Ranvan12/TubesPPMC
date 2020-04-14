@@ -3,9 +3,8 @@
  * Kelompok		: 1
  * Hari dan Tanggal	: Senin, 13 April 2020
  * Asisten (NIM)	: Rahma Rizky Alifia (18316003)
- * Nama File		: mainmenu.c
- * Deskripsi		: Program yang berisi prosedur menu dan main function dari simulasi
- *                    	  Game of Life
+ * Nama File		: main.c
+ * Deskripsi		: Program yang main function dari simulasi Game of Life
  */
 
 #include<stdio.h>
