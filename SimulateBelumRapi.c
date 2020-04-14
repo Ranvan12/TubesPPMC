@@ -64,7 +64,7 @@ void Update (cell*** A, int r, int c){
 //Bagian ini hanya untuk menguji kedua fungsi di atas
 //Test function
 
-void TestSimulate (){
+int main (){
 	cell** A;
 	int i, j, r, c;
 	
@@ -178,4 +178,6 @@ void TestSimulate (){
 	free (A);
 	
 	//Test Input Example : -------X---XXX---X-------
+	
+	return 0;
 }
