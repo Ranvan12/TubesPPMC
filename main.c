@@ -50,7 +50,6 @@ int main(){
     while (next == 'Y'|| next == 'y'){
         printf("\nMasukkan nama file : \n");
         //input_file(A, r, c, fileName);
-        Delay(750);
         printf("\nMemulai simulasi."); Delay(750); printf("."); Delay(750); printf("."); Delay(750);
         printf("\n");
 
