@@ -15,6 +15,7 @@ void AliveNeighbor (cell*** A, int r, int c){
 	for (i = 0; i < r; i = i + 1){
 		for (j = 0; j < c; j = j + 1){
 			(*A)[i][j].neighbor = 0;
+			//Mengecek semua tetangga
 			for (h = -1; h <= 1; h = h + 1){
 				for (v = -1; v <= 1; v = v + 1){
 					row = (i + h + r) % r;
@@ -40,6 +41,7 @@ void Update (cell*** A, int r, int c){
 			else if (((*A)[i][j].data == '-') && ((*A)[i][j].neighbor == 3)){
 				(*A)[i][j].data = 'X';
 			}
+			//else : tidak ada perubahan
 		}
 	}
 }
