@@ -1,3 +1,12 @@
+/* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
+ * MODUL 8 – TUGAS BESAR
+ * Kelompok		: 1
+ * Hari dan Tanggal	: Jumat, 17 April 2020
+ * Asisten (NIM)	: Rahma Rizky Alifia (18316003)
+ * Nama File		: Simulate.c
+ * Deskripsi		: Program Revisi input_file.c (sudah dites)
+ */
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -7,6 +16,7 @@ typedef struct cell {
 	int neighbor;
 } cell;
 
+//Prosedur untuk mencetak array cell 2 dimensi
 void PrintCell (cell** Arr, int r, int c){
 	int i, j;
 	for (i = 0; i < r; i = i + 1){
@@ -17,6 +27,7 @@ void PrintCell (cell** Arr, int r, int c){
 	}
 }
 
+//Prosedur input_file
 void input_file(cell*** A, int* r, int* c){
 	char isi_file[100][101];
 	char in_file[101];
@@ -44,10 +55,10 @@ void input_file(cell*** A, int* r, int* c){
 	*c = atoi(isi_file[1]);
 	
 	//Menginisialisasi jumlah alamat pada matrix agar sesuai dengan jumlah row dan column seed
-    *A = (cell**)malloc((*r) * sizeof(cell*));
-    for(i = 0; i < (*r); i++){
-        (*A)[i] = (cell*)malloc((*c) * sizeof(cell));
-    }
+	*A = (cell**)malloc((*r) * sizeof(cell*));
+	for(i = 0; i < (*r); i++){
+		(*A)[i] = (cell*)malloc((*c) * sizeof(cell));
+	}
 	
 	//Mengisi array matrix dengan seed yang ada pada array isi_file 
 	for(i = 0; i < (*r); i++){
