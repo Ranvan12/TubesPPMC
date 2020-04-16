@@ -3,15 +3,19 @@
 * Rombongan         : C
 * Kelompok          : 1
 * Hari dan Tanggal  : Selasa, 14 April 2018
-* Asisten (NIM)     : Rahma R. A. (18316003)
+* Asisten (NIM)     : Rahma Rizky Alifia (18316003)
 * Nama File         : lib.h
-* Deskripsi         : 
-*   Implementasi Fungsi Display dan Delay
+* Deskripsi         : Header library bentukan untuk Game of Life
 */
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+
+
+//#include "input_file.c"
+#include "Simulate.c"
+#include "display.c"
 
 typedef struct cell {
 	char data;
@@ -23,7 +27,3 @@ void AliveNeighbor (cell*** A, int r, int c);
 void Update (cell*** A, int r, int c);
 void Delay(int time);
 void Display(int row, int col, cell** matrix);
-
-//#include "input_file.c"
-#include "Simulate.c"
-#include "display.c"
