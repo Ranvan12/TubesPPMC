@@ -1,0 +1,12 @@
+8
+8
+--------
+-XX--XXX
+-X---XX-
+-XXXXXXX
+-X----X-
+--X-----
+----XXXX
+---XXX--
+
+lalala lilili
