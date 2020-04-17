@@ -2,7 +2,7 @@
 * MODUL 9 – TUGAS BESAR
 * Rombongan         : C
 * Kelompok          : 1
-* Hari dan Tanggal  : Selasa, 14 April 2018
+* Hari dan Tanggal  : Jumat, 17 April 2018
 * Asisten (NIM)     : Rahma R. A. (18316003)
 * Nama File         : Simulate_test.c
 * Deskripsi         : 
