@@ -45,7 +45,7 @@ int main(){
         
         //menunjukkan isi seed
         printf("Bentuk seed saat ini: \n");
-        Display(r, c, A, 250);
+        Display(r, c, A);
         
         //pilihan menu
         printf("Apa yang ingin Anda lakukan?\n");
@@ -63,14 +63,14 @@ int main(){
                 //loop sebanyak num_it
                 for(i=0; i<=num_it; i++){
                     Update(&A, &r, &c);
-                    Display(r, c, A, 250);
+                    Display(r, c, A);
                 }
             }
             //2. Tick
             else if (choice==2){
                 printf("\n");
                 Update(&A, &r, &c);
-                Display(r, c, A, 250);
+                Display(r, c, A);
             }
             //jika user memasukkan bukan 1, 2, atau 3
             else{
