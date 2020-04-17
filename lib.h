@@ -11,11 +11,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-
-#include "inputFile.c"
-#include "Simulate.c"
-#include "Display.c"
-
 typedef struct cell {
 	char data;
 	int neighbor;
@@ -26,3 +21,7 @@ void AliveNeighbor (cell*** A, int r, int c);
 void Update (cell*** A, int r, int c);
 void Delay(int time);
 void Display(int row, int col, cell** matrix);
+
+#include "inputFile.c"
+#include "Simulate.c"
+#include "Display.c"
