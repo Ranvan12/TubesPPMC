@@ -16,6 +16,7 @@ int main(){
     char next;
     char apapun;
     char choice;
+    
     //deskripsi dan peraturan game
     printf("\n");
     printf(" ----------------------------------------------------------------------------- \n");
@@ -30,7 +31,7 @@ int main(){
     printf("x                                                                             x\n");
     printf(" ----------------------------------------------------------------------------- \n\n");
     
-    //user akan membaca deskripsi dan peraturan terlebih
+    //user akan membaca deskripsi dan peraturan terlebih dahulu
     //game akan dimulai saat user menekan enter
     printf("Tekan enter untuk mulai bermain!");
     scanf("%c", &apapun);
