@@ -57,7 +57,7 @@ int main(){
         while (choice != '3'){
             //1. Animate
             if (choice == '1'){
-                printf("\nMasukkan banyak iterasi yang ingin dilakukan!\n");
+                printf("Masukkan banyak iterasi yang ingin dilakukan!\n");
                 printf("Banyak iterasi : ");
                 scanf("%d", &num_it);
                 //loop sebanyak num_it
