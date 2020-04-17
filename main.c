@@ -10,6 +10,7 @@
 #include "lib.h"
 
 int main(){
+    cell** A;
     char apapun;
     int choice, num_it;
     char next;
@@ -34,7 +35,6 @@ int main(){
     //looping menu
     next = 'Y';
     while (next == 'Y'|| next == 'y'){
-        printf("\nMasukkan nama file : \n");
         //input_file(A, r, c, fileName);
         printf("\nMemulai simulasi."); Delay(750); printf("."); Delay(750); printf("."); Delay(750);
         printf("\n");
