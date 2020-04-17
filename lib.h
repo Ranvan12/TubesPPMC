@@ -14,7 +14,7 @@
 
 #include "inputFile.c"
 #include "Simulate.c"
-#include "display.c"
+#include "Display.c"
 
 typedef struct cell {
 	char data;
