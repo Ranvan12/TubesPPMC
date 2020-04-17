@@ -12,7 +12,7 @@
 
 int main(){
     cell** A;
-	int r=5, c=5;
+    int r=5, c=5;
     int i, j;
 
     //Alokasi Matrix
