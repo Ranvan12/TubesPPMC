@@ -4,7 +4,7 @@
  * Hari dan Tanggal	: Jumat, 17 April 2020
  * Asisten (NIM)	: Rahma Rizky Alifia (18316003)
  * Nama File		: Simulate.c
- * Deskripsi		: Program Revisi input_file.c (sudah dites)
+ * Deskripsi		: Program untuk mengetes InputFile.c
  */
 
 #include "../lib.h"
