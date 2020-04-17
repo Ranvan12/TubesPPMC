@@ -53,7 +53,6 @@ int main(){
         printf("Pilih 1/2/3 : ");
         while (fgetc(stdin) != '\n'){}
         choice = fgetc(stdin);
-        printf("%c|%c", choice, buf);
         //program akan terus menunjukkan menu selama user tidak memilih quit
         while (choice != '3'){
             //1. Animate
