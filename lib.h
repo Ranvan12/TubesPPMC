@@ -5,7 +5,7 @@
 * Hari dan Tanggal  : Jumat, 17 April 2018
 * Asisten (NIM)     : Rahma Rizky Alifia (18316003)
 * Nama File         : lib.h
-* Deskripsi         : Header library bentukan untuk Game of Life
+* Deskripsi         : Library bentukan untuk Game of Life
 */
 #include <stdio.h>
 #include <string.h>
