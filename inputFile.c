@@ -27,17 +27,17 @@ void input_file(cell*** A, int* r, int* c){
 	c = atoi(isi_file[1]);
 
 	//Menginisialisasi jumlah alamat pada matrix agar sesuai dengan jumlah row dan column seed
-    A = (char*)malloc(r*sizeof(char*));			//-> *A = (char**)malloc(r*sizeof(char*))
+    A = (char*)malloc(r*sizeof(char*));
     for(int i=0; i<r; i++){
-        A[i] = (char*)malloc(c*sizeof(char));	//A[i] -> (*A)[i]
+        A[i] = (char*)malloc(c*sizeof(char));
     }
 
     //Mengisi array matrix dengan seed yang ada pada array isi_file 
-	for(int i=0; i<r; i++){						//liat input_file_rev.c line 64
+	for(int i=0; i<r; i++){
         int k;
         //Seed pada array isi_file terletak mulai isi_file[2]
         k = i+2;
-        strcpy(A[i], isi_file[k]);				//gabisa strcpy karena (*A)[i] bukan char *, tapi cell *
+        strcpy(A[i], isi_file[k]);
 	}
 
 }
