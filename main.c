@@ -15,7 +15,7 @@ int main(){
     int r, c, i;
     char next;
     char apapun;
-    char choice, buf[255];
+    char choice;
     //deskripsi dan peraturan game
     printf("\n");
     printf(" ----------------------------------------------------------------------------- \n");
