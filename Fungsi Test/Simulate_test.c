@@ -27,13 +27,13 @@ int main(){
     }
 
 /* Proses Pengisian Seed */
-    /* * * * *
-     * ----- *
-     * ----- *
-     * -XXX- *
-     * ----- *
-     * ----- *
-     * * * * */
+    /* Seed yang diisi pada matriks
+     * ----- 
+     * ----- 
+     * -XXX- 
+     * ----- 
+     * ----- 
+     */
     
     for ( i = 0; i < row; i++)
     {
@@ -61,6 +61,7 @@ int main(){
     }
     printf("\n");
 
+    // loop akan berhenti bila masukan N == 0
     while(N != 0)
     {
         printf("How many iteration would you like? \n(input 0 to exit)"); scanf("%d", &N);

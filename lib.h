@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "inputFile.c"
+#include "input_file.c"
 #include "Simulate.c"
 #include "Display.c"
 

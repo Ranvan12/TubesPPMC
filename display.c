@@ -25,7 +25,7 @@ void Delay(int time)// ide diambil dari https://c-for-dummies.com/blog/?p=69, di
 
 void Display(int row, int col, cell** matrix){
     int i, j;
-    // iterasi setiap elemen dalam matriks 2D "matrix"
+    // iterasi setiap elemen dalam matriks 2D "matrix.data"
     for (i = 0; i < row; i++)
     {
         for (j = 0; j < col; j++)
