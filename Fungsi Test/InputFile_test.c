@@ -7,15 +7,7 @@
  * Deskripsi		: Program Revisi input_file.c (sudah dites)
  */
 
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
 #include "../lib.h"
-
-typedef struct cell {
-	char data;
-	int neighbor;
-} cell;
 
 //Prosedur untuk mencetak array cell 2 dimensi
 void PrintCell (cell** Arr, int r, int c){
