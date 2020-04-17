@@ -1,5 +1,5 @@
 /* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
- * MODUL 8 – TUGAS BESAR
+ * MODUL 9 – TUGAS BESAR
  * Kelompok		: 1
  * Hari dan Tanggal	: Jumat, 17 April 2020
  * Asisten (NIM)	: Rahma Rizky Alifia (18316003)
