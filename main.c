@@ -1,6 +1,6 @@
 /* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
  * MODUL 8 – TUGAS BESAR
- * Kelompok		: 1
+ * Kelompok		    : 1
  * Hari dan Tanggal	: Senin, 13 April 2020
  * Asisten (NIM)	: Rahma Rizky Alifia (18316003)
  * Nama File		: main.c
@@ -11,10 +11,10 @@
 
 int main(){
     cell** A;
-    char apapun;
     int choice, num_it;
+    int r, c, i;
     char next;
-    int i;
+    char apapun;
 
     //deskripsi biar lucu
     printf("\n");
@@ -30,12 +30,12 @@ int main(){
     printf("x                                                                             x\n");
     printf(" ----------------------------------------------------------------------------- \n\n");
     printf("Tekan enter untuk mulai bermain!");
-    scanf("%c", &apapun);
+    scanf("%c", &apapun); //agar mulai saat enter
 
     //looping menu
     next = 'Y';
     while (next == 'Y'|| next == 'y'){
-        //input_file(A, r, c, fileName);
+        //input_file(&A, &r, &c);
         printf("\nMemulai simulasi."); Delay(750); printf("."); Delay(750); printf("."); Delay(750);
         printf("\n");
 
@@ -48,21 +48,21 @@ int main(){
         scanf("%d", &choice);
 
         while (choice != 3){
-            if (choice == 1){
+            if (choice == 1){ //animate
                 printf("\nMasukkan banyak iterasi yang ingin dilakukan!\n");
                 printf("Banyak iterasi : ");
                 scanf("%d", &num_it);
                 //loop sebanyak num_it
                 for(i=0; i<=num_it; i++){
-                    //Update(A, r, c);
+                    //Update(&A, &r, &c);
                     //Display(r, c, A, 250);
                     printf("tick ke = %d\n", i);
                     Delay(250); //ini biar ada isi aja
                 }
             }
-            else if (choice==2){
+            else if (choice==2){ //tick
                 printf("\n");
-                //Update(A, r, c);
+                //Update(&A, &r, &c);
                 //Display(r, c, A, 250);
                 printf("1 kali tick\n");
             }
@@ -76,7 +76,7 @@ int main(){
             scanf("%d", &choice);
             printf("\n");
         }
-        
+        //quit
         printf("Simulasi selesai!\n");
         printf("Apakah Anda ingin memasukkan file baru?\n");
         printf("Y/N : ");
