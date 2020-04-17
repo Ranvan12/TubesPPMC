@@ -22,6 +22,6 @@ void Update (cell*** A, int r, int c);
 void Delay(int time);
 void Display(int row, int col, cell** matrix);
 
-#include "inputFile.c"
+#include "InputFile.c"
 #include "Simulate.c"
 #include "Display.c"
