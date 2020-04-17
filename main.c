@@ -41,7 +41,7 @@ int main(){
         //mengambil isi seed beserta baris dan kolom
         input_file(&A, &r, &c);
         printf("\nMemulai simulasi."); Delay(750); printf("."); Delay(750); printf("."); Delay(750);
-        printf("\n");
+        printf("\n\n");
         
         //menunjukkan isi seed
         printf("Bentuk seed saat ini: \n");
@@ -75,21 +75,22 @@ int main(){
             //jika user memasukkan bukan 1, 2, atau 3
             else{
                 printf("Anda salah memasukkan pilihan!\n");
-                printf("Masukkan pilihan kembali.\n");
+                printf("Masukkan pilihan kembali.\n\n");
             }
-            printf("\nApa yang ingin Anda lakukan?\n");
+            printf("Apa yang ingin Anda lakukan?\n");
             printf("1. Animate\n2. Tick\n3. Quit\n");
             printf("Pilih 1/2/3 : ");
             scanf("%d", &choice);
             printf("\n");
         }
         //3. Quit
-        printf("Simulasi selesai!\n");
+        printf("Simulasi selesai!\n\n");
         printf("Apakah Anda ingin memasukkan file baru?\n");
         printf("Y/N : ");
         scanf(" %c", &next);
+        printf("\n");
     }
 
-    printf("Terima kasih telah bermain! Simulasi berakhir.");
+    printf("Terima kasih telah bermain! Simulasi berakhir.\n");
     return 0;
 }
