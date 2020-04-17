@@ -11,11 +11,11 @@
 
 int main(){
     cell** A;
-    int choice, num_it;
+    int num_it;
     int r, c, i;
     char next;
     char apapun;
-
+    char choice;
     //deskripsi dan peraturan game
     printf("\n");
     printf(" ----------------------------------------------------------------------------- \n");
@@ -51,23 +51,23 @@ int main(){
         printf("Apa yang ingin Anda lakukan?\n");
         printf("1. Animate\n2. Tick\n3. Quit\n");
         printf("Pilih 1/2/3 : ");
-        scanf("%d", &choice);
-        
+        while (fgetc(stdin) != '\n'){}
+        choice = fgetc(stdin);
         //program akan terus menunjukkan menu selama user tidak memilih quit
-        while (choice != 3){
+        while (choice != '3'){
             //1. Animate
-            if (choice == 1){
-                printf("\nMasukkan banyak iterasi yang ingin dilakukan!\n");
+            if (choice == '1'){
+                printf("Masukkan banyak iterasi yang ingin dilakukan!\n");
                 printf("Banyak iterasi : ");
                 scanf("%d", &num_it);
                 //loop sebanyak num_it
-                for(i=0; i<=num_it; i++){
+                for(i=0; i<num_it; i++){
                     Update(&A, r, c);
                     Display(r, c, A);
                 }
             }
             //2. Tick
-            else if (choice==2){
+            else if (choice=='2'){
                 printf("\n");
                 Update(&A, r, c);
                 Display(r, c, A);
@@ -80,7 +80,8 @@ int main(){
             printf("Apa yang ingin Anda lakukan?\n");
             printf("1. Animate\n2. Tick\n3. Quit\n");
             printf("Pilih 1/2/3 : ");
-            scanf("%d", &choice);
+            while (fgetc(stdin) != '\n'){}
+            choice = fgetc(stdin);
             printf("\n");
         }
         //3. Quit
