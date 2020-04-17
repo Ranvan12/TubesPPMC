@@ -62,14 +62,14 @@ int main(){
                 scanf("%d", &num_it);
                 //loop sebanyak num_it
                 for(i=0; i<=num_it; i++){
-                    Update(&A, &r, &c);
+                    Update(&A, r, c);
                     Display(r, c, A);
                 }
             }
             //2. Tick
             else if (choice==2){
                 printf("\n");
-                Update(&A, &r, &c);
+                Update(&A, r, c);
                 Display(r, c, A);
             }
             //jika user memasukkan bukan 1, 2, atau 3
