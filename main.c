@@ -16,7 +16,7 @@ int main(){
     char next;
     char apapun;
 
-    //deskripsi biar lucu
+    //deskripsi dan peraturan game
     printf("\n");
     printf(" ----------------------------------------------------------------------------- \n");
     printf("x                                Game of Life                                 x\n");
@@ -29,43 +29,50 @@ int main(){
     printf("o    4. Sel mati dengan tetangga berjumlah 3 sel akan hidup                   o\n");
     printf("x                                                                             x\n");
     printf(" ----------------------------------------------------------------------------- \n\n");
+    
+    //user akan membaca deskripsi dan peraturan terlebih
+    //game akan dimulai saat user menekan enter
     printf("Tekan enter untuk mulai bermain!");
-    scanf("%c", &apapun); //agar mulai saat enter
+    scanf("%c", &apapun);
 
-    //looping menu
+    //looping menu, program akan mengulang saat user memasukkan 'Y' untuk file baru
     next = 'Y';
     while (next == 'Y'|| next == 'y'){
-        //input_file(&A, &r, &c);
+        //mengambil isi seed beserta baris dan kolom
+        input_file(&A, &r, &c);
         printf("\nMemulai simulasi."); Delay(750); printf("."); Delay(750); printf("."); Delay(750);
         printf("\n");
-
-        printf("Bentuk seed saat ini: \n");
-        //Display(r, c, A, 250);
         
+        //menunjukkan isi seed
+        printf("Bentuk seed saat ini: \n");
+        Display(r, c, A, 250);
+        
+        //pilihan menu
         printf("Apa yang ingin Anda lakukan?\n");
         printf("1. Animate\n2. Tick\n3. Quit\n");
         printf("Pilih 1/2/3 : ");
         scanf("%d", &choice);
-
+        
+        //program akan terus menunjukkan menu selama user tidak memilih quit
         while (choice != 3){
-            if (choice == 1){ //animate
+            //1. Animate
+            if (choice == 1){
                 printf("\nMasukkan banyak iterasi yang ingin dilakukan!\n");
                 printf("Banyak iterasi : ");
                 scanf("%d", &num_it);
                 //loop sebanyak num_it
                 for(i=0; i<=num_it; i++){
-                    //Update(&A, &r, &c);
-                    //Display(r, c, A, 250);
-                    printf("tick ke = %d\n", i);
-                    Delay(250); //ini biar ada isi aja
+                    Update(&A, &r, &c);
+                    Display(r, c, A, 250);
                 }
             }
-            else if (choice==2){ //tick
+            //2. Tick
+            else if (choice==2){
                 printf("\n");
-                //Update(&A, &r, &c);
-                //Display(r, c, A, 250);
-                printf("1 kali tick\n");
+                Update(&A, &r, &c);
+                Display(r, c, A, 250);
             }
+            //jika user memasukkan bukan 1, 2, atau 3
             else{
                 printf("Anda salah memasukkan pilihan!\n");
                 printf("Masukkan pilihan kembali.\n");
@@ -76,7 +83,7 @@ int main(){
             scanf("%d", &choice);
             printf("\n");
         }
-        //quit
+        //3. Quit
         printf("Simulasi selesai!\n");
         printf("Apakah Anda ingin memasukkan file baru?\n");
         printf("Y/N : ");
