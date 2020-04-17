@@ -1,8 +1,9 @@
 /* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
  * MODUL 9 – TUGAS BESAR
  * Kelompok		: 1
+ * Hari dan Tanggal : Jumat, 17 April 2020
  * Asisten (NIM)	: Rahma Rizky Alifia (18316003)
- * Nama File		: input_file.c
+ * Nama File		: InputFile.c
  * Deskripsi		: Membuat fungsi untuk input file external, lalu bagian seed dimasukkan ke array
  */
 #include<stdio.h>
@@ -11,7 +12,6 @@
 
 //Prosedur input_file
 void input_file(cell*** A, int* r, int* c){
-	//101 karena pada akhir string diisi null character
 	char isi_file[100][101];
 	char in_file[101];
 	int count = 0;
@@ -25,9 +25,10 @@ void input_file(cell*** A, int* r, int* c){
 	//Dan memindahkan setiap baris pada file tsb ke array char isi_file
 	FILE *teks = fopen(in_file, "r");
 	while(!feof (teks)){
-		fgets(buf, 101, teks);		//mengambil 1 baris dari teks
-		strcpy(isi_file[count],buf);	//memindahkannya ke array isi_file
-		count++;			//ganti baris
+		fgets(buf, 101, teks);
+		strcpy(isi_file[count],buf);
+		count++;
+		
 	}
 	fclose(teks);
 	
@@ -45,7 +46,7 @@ void input_file(cell*** A, int* r, int* c){
 	//Mengisi array matrix dengan seed yang ada pada array isi_file 
 	for(i = 0; i < (*r); i++){
 		for (j = 0; j < *c; j = j + 1){
-			//Seed pada array isi_file terletak mulai baris ketiga (isi_file[2])
+			//Seed pada array isi_file terletak mulai isi_file[2]
 			(*A)[i][j].data = isi_file[i + 2][j];
 		}
 	}
